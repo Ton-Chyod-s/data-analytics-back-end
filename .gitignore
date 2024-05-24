@@ -5,25 +5,10 @@ src/ArquivoResCliente/__pycache__/limpando_planilha_refactore.cpython-312.pyc
 src/ArquivoResCliente/Resultado Clientes.xlsx
 src/enviarEmail/__pycache__/email.cpython-312.pyc
 src/ArquivosDRE/tabelaTratada.xlsx
-src/ArquivoResCliente/Analise venda.pbix
-src/ArquivosDRE/Dre-versão f1.pbix
-src/ArquivosDRE/Novo dre.pbix
-src/ArquivosDRE/tabelaTratada-2023.xlsx
-src/CmdSQL/LogComandos.sql
-src/deprecated/dashboards/Analise venda.pbix
-src/deprecated/dashboards/Analise venda_.pbix
-src/deprecated/dashboards/Dre-versão f1.pbix
-src/deprecated/dashboards/Layout Analise v2.pbix
-src/deprecated/dashboards/Layout Analise v3.pbix
-src/deprecated/dashboards/Layout Analise v5.pbix
-src/deprecated/dashboards/Layout DRE v1.pbix
-src/deprecated/dashboards/Layout DRE v2.pbix
-src/deprecated/dashboards/Layout DRE v4.pbix
-src/deprecated/dashboards/Layout DRE v5.pbix
-src/deprecated/dashboards/Layout DRE v6.pbix
-src/deprecated/dashboards/Layout DRE v7.pbix
-src/deprecated/dashboards/Novo dre.pbix
-src/deprecated/DRE/__pycache__/__init__.cpython-311.pyc
+test/2024/01T2024/Pag Poko 1º Trimestre 2024.xlsx
+src/deprecated/DRE/Veratti 2023.xlsx
+src/deprecated/DRE/Atacado da Casa 2023.xlsx
+src/deprecated/DRE/Aquino 2023.xlsx
 src/deprecated/DRE/__pycache__/tabelas.cpython-312.pyc
 src/deprecated/DRE/__pycache__/tabelas.cpython-311.pyc
 src/deprecated/DRE/__pycache__/conexão.cpython-312.pyc
@@ -31,7 +16,22 @@ src/deprecated/DRE/__pycache__/conexão.cpython-311.pyc
 src/deprecated/DRE/__pycache__/analise.cpython-312.pyc
 src/deprecated/DRE/__pycache__/analise.cpython-311.pyc
 src/deprecated/DRE/__pycache__/__init__.cpython-312.pyc
-src/deprecated/DRE/Aquino 2023.xlsx
-src/deprecated/DRE/Atacado da Casa 2023.xlsx
-src/deprecated/DRE/Veratti 2023.xlsx
-test/2024/01T2024/Pag Poko 1º Trimestre 2024.xlsx
+src/deprecated/DRE/__pycache__/__init__.cpython-311.pyc
+src/deprecated/dashboards/Novo dre.pbix
+src/deprecated/dashboards/Layout DRE v7.pbix
+src/deprecated/dashboards/Layout DRE v6.pbix
+src/deprecated/dashboards/Layout DRE v5.pbix
+src/deprecated/dashboards/Layout DRE v4.pbix
+src/deprecated/dashboards/Layout DRE v2.pbix
+src/deprecated/dashboards/Layout DRE v1.pbix
+src/deprecated/dashboards/Layout Analise v5.pbix
+src/deprecated/dashboards/Layout Analise v3.pbix
+src/deprecated/dashboards/Layout Analise v2.pbix
+src/deprecated/dashboards/Dre-versão f1.pbix
+src/deprecated/dashboards/Analise venda_.pbix
+src/deprecated/dashboards/Analise venda.pbix
+src/CmdSQL/LogComandos.sql
+src/ArquivosDRE/tabelaTratada-2023.xlsx
+src/ArquivosDRE/Novo dre.pbix
+src/ArquivosDRE/Dre-versão f1.pbix
+src/ArquivoResCliente/Analise venda.pbix
