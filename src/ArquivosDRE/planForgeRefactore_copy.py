@@ -12,8 +12,6 @@ anoAtual = data_atual.year
 
 def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
     try:
-        
-
         inicioContador = time.time()
         tempoExecucao = 0
         nomeTabelaTratada = 'tabelaTratada'
