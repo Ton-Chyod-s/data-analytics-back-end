@@ -436,14 +436,12 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                             preencher_dicionario('DESPESAS FINANCEIRAS','despesasFinaceiras',drePadrao)
                             preencher_dicionario('Imposto De Renda','impostoRenda',drePadrao)
 
-
                             preencher_dicionario('IR','imposto', dreTrimestre,False)
                             preencher_dicionario('ADD','add', dreTrimestre)
                             preencher_dicionario('CSLL','csll',dreTrimestre)
                             preencher_dicionario('TOTAL','total', dreTrimestre)
                             preencher_dicionario('TOTAL IR-ADD','totalIrAdd',dreTrimestre)
                             preencher_dicionario('EBITDA','ebitda',dreTrimestre)
-
 
                             lucro = dreTrimestre['lucro'][f'MvtoLíquido {mes}/{ano}']
                             contribuicaoSocial = dreTrimestre['contribuicao_social'][f'MvtoLíquido {mes}/{ano}']
@@ -603,7 +601,6 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
 
                             #venda
                             df.at[dreTrimestre['venda'][f'Index_linha {mes}/{ano}'], f'MvtoLíquido {mes}/{ano}'] = dreTipo3['receitasOperacionais'][coluna_a_encontrar]
-
                             #lucro
                             df.at[dreTrimestre['lucroContabil'][f'Index_linha {mes}/{ano}'], f'MvtoLíquido {mes}/{ano}'] = dreTipo3['resultadoDRE'][coluna_a_encontrar]
 
@@ -616,7 +613,6 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                                         preencher_dicionario('Contribuicao Social','contribuicaoSocial', dreTrimestre, False)
                                     except Exception as e:
                                         print("An unexpected error occurred:", e)
-
                             df.at[dreTrimestre['recolhido'][f'Index_linha {mes}/{ano}'], f'MvtoLíquido {mes}/{ano}'] = round(dreTrimestre['contribuicaoSocial'][coluna_a_encontrar] / 0.9 * 10)
 
                             #receitas nao operacionais
@@ -631,14 +627,11 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                             #lucro
                             df.at[dreTrimestre['lucro'][f'Index_linha {mes}/{ano}'], f'MvtoLíquido {mes}/{ano}'] = dreTipo3['resultadoDRE'][coluna_a_encontrar] 
                             
-                            # - dreTipo3['outrasReceitas'][coluna_a_encontrar]
-                            
                             preencher_dicionario('IR','imposto', dreTrimestre,False)
                             preencher_dicionario('ADD','add', dreTrimestre, False)
                             preencher_dicionario('CSLL','csll',dreTrimestre, False)
                             preencher_dicionario('TOTAL','total', dreTrimestre, False)
                             preencher_dicionario('TOTAL IR-ADD','totalIrAdd',dreTrimestre, False)
-
                             calculoTrimestre = dreTipo3
 
                     '''Fim da procura e calculo necessario ----------------------------------------------------------------------------------'''
@@ -667,20 +660,16 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                                 else:
                                     calc_add = round((somaMesesLucroContabil - 60000) * 0.1, 2)
                             df.at[dreTrimestre['add']['Index_linha {}/{}'.format(meses[item + 2], ano)], 'MvtoLíquido {}/{}'.format(meses[item + 2], ano)] = calc_add
-
                             #CSLL
                             calc_csll = round(somaMesesLucroContabil * 0.09, 2)
                             df.at[dreTrimestre['csll']['Index_linha {}/{}'.format(meses[item + 2], ano)], 'MvtoLíquido {}/{}'.format(meses[item + 2], ano)] = calc_csll
-
                             #total
                             total_ = round(res_IR + calc_add + calc_csll,2)
                             df.at[dreTrimestre['total']['Index_linha {}/{}'.format(meses[item + 2], ano)], 'MvtoLíquido {}/{}'.format(meses[item + 2], ano)] = total_
-
                             #total_ir_add
                             tot_ir_add = round(res_IR + calc_add,2)
                             df.at[dreTrimestre['totalIrAdd']['Index_linha {}/{}'.format(meses[item + 2], ano)], 'MvtoLíquido {}/{}'.format(meses[item + 2], ano)] = tot_ir_add
                             '''--Fim do calculo trimestre--'''
-
                         except:
                             break
 
