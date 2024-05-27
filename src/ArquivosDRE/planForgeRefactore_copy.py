@@ -4,11 +4,15 @@ import sys
 import time
 import locale
 import pandas as pd
+from time import sleep
+from datetime import datetime
+
+data_atual = datetime.now()
+anoAtual = data_atual.year  
 
 def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
     try:
-        from time import sleep
-        from datetime import datetime
+        
 
         inicioContador = time.time()
         tempoExecucao = 0
@@ -708,10 +712,11 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
             
             # Salvar planilha Excel tratada, trocando index = True mostra o index das linhas
             try:
-                if nomeDaPasta == anoAnterior:
-                    novaTabela.to_excel(f'{ondeSalvar}{nomeTabelaTratada}-2023.xlsx', index=False)
-                else:
+                if nomeDaPasta == anoAtual:
                     novaTabela.to_excel(f'{ondeSalvar}{nomeTabelaTratada}.xlsx', index=False)
+                else: 
+                    novaTabela.to_excel(f'{ondeSalvar}{nomeTabelaTratada}-{ano}.xlsx', index=False)
+
             except PermissionError:
                 print('Feche a planilha para salvar o arquivo')
                 sys.exit()
