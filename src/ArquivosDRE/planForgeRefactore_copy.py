@@ -6,7 +6,7 @@ import locale
 import pandas as pd
 from tqdm import tqdm
 
-def forgePlan(caminho, ondeSalvar):
+def forgePlan(caminho, ondeSalvar, ano):
     try:
         from time import sleep
         from datetime import datetime
@@ -14,8 +14,8 @@ def forgePlan(caminho, ondeSalvar):
         inicioContador = time.time()
         tempoExecucao = 0
         nomeTabelaTratada = 'tabelaTratada'
-        nomeDaPasta = r'\2024'
-        anoAnterior = r'\2023'
+        nomeDaPasta = f'\\{ano}'
+        anoAnterior = f'\\{ano - 1}'
         continuar = False
         calculoTrimestre = None
 
@@ -747,5 +747,5 @@ if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
     #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024)
     print(tempoExecucao)

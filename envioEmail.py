@@ -13,7 +13,7 @@ caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados 
 
 print('Iniciando as analises...')
 tempoLimp = limp_plan(caminhoPastaLimp, ondeSalvarLimp)
-tempoForge = forgePlan(caminhoForge, ondeSalvarForge)
+tempoForge = forgePlan(caminhoForge, ondeSalvarForge, 2024)
 
 corpo_mensagem = f'''<p>Olá, segue em anexo o resultado do processo de limpeza e da planilha DRE.</p>
 <p>Planilha Resultado Cliente<br>{tempoLimp}</p>
