@@ -43,14 +43,8 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
             if str(ano) not in nomeDaPasta:
                 ano = int(nomeDaPasta.replace('\\',''))
 
-            diretorio_atual = os.path.dirname(__file__)
-
-            # caminhoPasta = os.path.join(diretorio_atual, 'teste')
-
             caminhoPasta = caminho + nomeDaPasta + trimestre 
             arquivosPasta = os.listdir(caminhoPasta)
-
-            caminhoTabelaTratada = f'{os.getcwd()}\\{nomeTabelaTratada}.xlsx'
 
             #verificando se a pasta existe e se tem arquivos dentro da mesma
             if not os.path.exists(caminhoPasta):
@@ -90,29 +84,21 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                     #verificando se a aba é a empresa correta
                     if 'Pires e Cia' in nomeEmpresaString:
                         tipoDRE = 2    
-                    
                     elif 'Fam Atacado' in nomeEmpresaString:
                         tipoDRE = 2   
-                        
                     elif 'VRA ' in nomeEmpresaString:
                         tipoDRE = 1    
-                        
                     elif 'Fogo Atacado' in nomeEmpresaString:
                         tipoDRE = 1    
-                        
                     elif 'JChagas' in nomeEmpresaString:
                         tipoDRE = 1   
-                    
                     elif 'Bonanca' in nomeEmpresaString:
                         tipoDRE = 3   
-
                     elif 'S Pires' in nomeEmpresaString:
                         tipoDRE = 3   
                         
                     #valores das celulas
                     primeiraCelula = df.keys()[0]
-                    terceiraCelula = df.keys()[2]
-            
                     tanhoPrimeiraCelula = len(primeiraCelula)
                     #se o dataframe não tiver a primeira linha em branco, vai acrescentar a primeira linha duplicada
                     if tanhoPrimeiraCelula > 10:
