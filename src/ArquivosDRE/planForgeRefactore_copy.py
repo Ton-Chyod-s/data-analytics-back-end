@@ -5,7 +5,7 @@ import time
 import locale
 import pandas as pd
 
-def forgePlan(caminho, ondeSalvar, ano):
+def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
     try:
         from time import sleep
         from datetime import datetime
@@ -13,20 +13,20 @@ def forgePlan(caminho, ondeSalvar, ano):
         inicioContador = time.time()
         tempoExecucao = 0
         nomeTabelaTratada = 'tabelaTratada'
-        nomeDaPasta = f'\\{ano}'
-        anoAnterior = f'\\{ano - 1}'
+        nomeDaPasta = f'\\{ano_analisado}'
+        anoAnterior = f'\\{ano_analisado - 1}'
         continuar = False
         calculoTrimestre = None
      
-        dic_trimestre = {'1º trimestre':f'01T{ano}',
-                        '2º trimestre': f'02T{ano}',
-                        '3º trimestre': f'03T{ano}',
-                        '4º trimestre': f'04T{ano}'}
+        dic_trimestre = {'1º trimestre':f'01T{ano_analisado}',
+                        '2º trimestre': f'02T{ano_analisado}',
+                        '3º trimestre': f'03T{ano_analisado}',
+                        '4º trimestre': f'04T{ano_analisado}'}
         
         novaTabela = []
         arquivos = ""
         anoAlisado = nomeDaPasta.replace('\\','')
-        semestreAnalisado = f'01T{anoAlisado}'
+        semestreAnalisado = f'0{semestre_analisado}T{anoAlisado}'
         
         #loop para interagir com os trimestres
         for key, value in enumerate(dic_trimestre):
@@ -41,7 +41,7 @@ def forgePlan(caminho, ondeSalvar, ano):
             ano = data_atual.year 
 
             if str(ano) not in nomeDaPasta:
-                ano = int(anoAnterior.replace('\\',''))
+                ano = int(nomeDaPasta.replace('\\',''))
 
             diretorio_atual = os.path.dirname(__file__)
 
@@ -741,5 +741,5 @@ if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
     #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2023, 3)
     print(tempoExecucao)
