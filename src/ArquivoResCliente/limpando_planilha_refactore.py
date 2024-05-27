@@ -2,11 +2,11 @@ import pandas as pd
 import time
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Border, Side, Color
+from tqdm import tqdm
 
 def limp_plan(caminhoPasta,ondeSalvar):
     try:
         inicioContador = time.time()
-    
         nome = 'Resultado Clientes'
         df = pd.read_excel(caminhoPasta)
 
@@ -92,4 +92,6 @@ def limp_plan(caminhoPasta,ondeSalvar):
 if __name__ == '__main__':
     caminhoPasta = r'\\192.168.1.2\dados\SUPERMERCADO ACOMPANHAMENTO\RESULTADOS CLIENTES - ALEX 2024.xlsx'
     ondeSalvar = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivoResCliente\\'
-    limp_plan(caminhoPasta,ondeSalvar)
+
+    result = limp_plan(caminhoPasta, ondeSalvar)
+    print(result)
