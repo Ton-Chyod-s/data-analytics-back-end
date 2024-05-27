@@ -716,6 +716,7 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
 if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
-    #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
+    #caminhoForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\test\Planilhas resultados - Power Bi'
+    
     tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 1)
     print(tempoExecucao)
