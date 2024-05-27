@@ -712,7 +712,7 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
             
             # Salvar planilha Excel tratada, trocando index = True mostra o index das linhas
             try:
-                if nomeDaPasta == anoAtual:
+                if str(anoAtual) in nomeDaPasta:
                     novaTabela.to_excel(f'{ondeSalvar}{nomeTabelaTratada}.xlsx', index=False)
                 else: 
                     novaTabela.to_excel(f'{ondeSalvar}{nomeTabelaTratada}-{ano}.xlsx', index=False)
@@ -732,5 +732,5 @@ if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
     #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 1)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2023, 1)
     print(tempoExecucao)
