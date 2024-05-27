@@ -4,7 +4,6 @@ import sys
 import time
 import locale
 import pandas as pd
-from tqdm import tqdm
 
 def forgePlan(caminho, ondeSalvar, ano):
     try:
@@ -18,17 +17,12 @@ def forgePlan(caminho, ondeSalvar, ano):
         anoAnterior = f'\\{ano - 1}'
         continuar = False
         calculoTrimestre = None
-
-        if nomeDaPasta == anoAnterior:
-            dic_trimestre = {'1º trimestre':'01T2023',
-                            '2º trimestre': '02T2023',
-                            '3º trimestre': '03T2023',
-                            '4º trimestre': '04T2023'}
-        else:
-            dic_trimestre = {'1º trimestre':'01T2024',
-                            '2º trimestre': '02T2024',
-                            '3º trimestre': '03T2024',
-                            '4º trimestre': '04T2024'}
+     
+        dic_trimestre = {'1º trimestre':f'01T{ano}',
+                        '2º trimestre': f'02T{ano}',
+                        '3º trimestre': f'03T{ano}',
+                        '4º trimestre': f'04T{ano}'}
+        
         novaTabela = []
         arquivos = ""
         anoAlisado = nomeDaPasta.replace('\\','')
