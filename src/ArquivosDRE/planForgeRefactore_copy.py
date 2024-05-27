@@ -395,7 +395,6 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                             #adicionando na planilha
                             df.at[dreTrimestre['venda'][f'Index_linha {mes}/{ano}'], f'MvtoLíquido {mes}/{ano}'] = dreTrimestre['venda_mercadorias'][f'MvtoLíquido {mes}/{ano}']
                             
-
                             #lucro contabil == soma de conta de resultados
                             preencher_dicionario('LUCRO CONTABIL','lucro_contabil', dreTrimestre, False)
                             lucroContabil = drePadrao['contas_resultado'][f'MvtoLíquido {mes}/{ano}']
