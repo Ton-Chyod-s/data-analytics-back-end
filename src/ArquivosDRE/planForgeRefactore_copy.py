@@ -741,5 +741,5 @@ if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
     #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2023, 3)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 1)
     print(tempoExecucao)
