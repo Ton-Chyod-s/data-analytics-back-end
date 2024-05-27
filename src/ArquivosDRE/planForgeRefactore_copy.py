@@ -18,7 +18,6 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
         tempoExecucao = 0
         nomeTabelaTratada = 'tabelaTratada'
         nomeDaPasta = f'\\{ano_analisado}'
-        anoAnterior = f'\\{ano_analisado - 1}'
         continuar = False
         calculoTrimestre = None
      
@@ -729,8 +728,8 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
         return f'Erro: {e}'
 
 if __name__ == '__main__':
-    ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
+    ondeSalvarForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
     caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
     #caminhoForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\test'
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2023, 1)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 1)
     print(tempoExecucao)

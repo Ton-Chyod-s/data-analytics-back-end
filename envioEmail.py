@@ -6,9 +6,9 @@ from src.enviarEmail.email import enviar_email, assunto, de, para, senha
 
 inicioContador = time.time()
 caminhoPastaLimp = r'\\192.168.1.2\dados\SUPERMERCADO ACOMPANHAMENTO\RESULTADOS CLIENTES - ALEX 2024.xlsx'
-ondeSalvarLimp = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivoResCliente\\'
+ondeSalvarLimp = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
 
-ondeSalvarForge = r'C:\Users\User\Documents\GitHub\processo-dre-excel\src\ArquivosDRE\\'
+ondeSalvarForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
 caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
 
 print('Iniciando as analises...')
