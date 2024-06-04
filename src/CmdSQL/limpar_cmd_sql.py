@@ -4,6 +4,7 @@ dict_cmd = {}
 newCMD = []
 
 file_path = os.path.join(os.path.dirname(__file__), 'LogComandos.sql')
+save_path = os.path.join(os.path.dirname(__file__))
 
 for i in open(file_path,'r'):
     cmd_sql.append(i.split(' '))
