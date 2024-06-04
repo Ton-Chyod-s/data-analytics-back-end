@@ -17,7 +17,7 @@ for key, lin in enumerate(cmd_sql):
 with open('ComandosLog.txt','a') as f:
     for i in dict_cmd:
         for j in dict_cmd[i]:
-            f.write(j)
+            f.write(f' {j}')
 
 #     for lin in cmd_sql:
 #         for i in range(2, len(lin)):
