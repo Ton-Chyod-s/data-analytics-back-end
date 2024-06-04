@@ -22,6 +22,7 @@ with open('ComandosLog.txt','a') as f:
         for j in dict_cmd[i]:
             f.write(f' {j}')
 
+
 #     for lin in cmd_sql:
 #         for i in range(2, len(lin)):
 #             if i == len(lin)-1:
@@ -29,5 +30,3 @@ with open('ComandosLog.txt','a') as f:
 #                 break
 #             else:
 #                 f.write(f' {lin[i]}')
-
-lol='lol'
