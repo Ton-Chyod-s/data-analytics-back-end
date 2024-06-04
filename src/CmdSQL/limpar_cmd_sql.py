@@ -3,7 +3,7 @@ cmd_sql = []
 dict_cmd = {}
 newCMD = []
 
-for i in open(os.path.abspath('LogComandos.txt'),'r'):
+for i in open(os.path.abspath(r'CmdSQL\\LogComandos.sql'),'r'):
     cmd_sql.append(i.split(' '))
 
 for key, lin in enumerate(cmd_sql):
