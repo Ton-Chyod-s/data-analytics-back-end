@@ -4,7 +4,7 @@ dict_cmd = {}
 newCMD = []
 
 file_path = os.path.join(os.path.dirname(__file__), 'LogComandos.sql')
-save_path = os.path.join(os.path.dirname(__file__))
+save_path = os.path.join(os.path.dirname(__file__), 'ComandosLog.txt')
 
 for i in open(file_path,'r'):
     cmd_sql.append(i.split(' '))
@@ -18,7 +18,7 @@ for key, lin in enumerate(cmd_sql):
     dict_cmd[key] = newCMD.copy()
     newCMD.clear()
 
-with open('ComandosLog.txt','a') as f:
+with open(save_path,'a') as f:
     for i in dict_cmd:
         for j in dict_cmd[i]:
             f.write(f' {j}')
