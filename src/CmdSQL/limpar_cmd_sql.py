@@ -1,8 +1,9 @@
+import os
 cmd_sql = []
 dict_cmd = {}
 newCMD = []
 
-for i in open('LogComandos.sql','r'):
+for i in open(os.path.abspath('LogComandos.txt'),'r'):
     cmd_sql.append(i.split(' '))
 
 for key, lin in enumerate(cmd_sql):
