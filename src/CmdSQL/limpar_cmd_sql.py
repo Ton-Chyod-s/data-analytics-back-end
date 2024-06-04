@@ -14,7 +14,11 @@ for key, lin in enumerate(cmd_sql):
     dict_cmd[key] = newCMD.copy()
     newCMD.clear()
 
-# with open('ComandosLog.txt','a') as f:
+with open('ComandosLog.txt','a') as f:
+    for i in dict_cmd:
+        for j in dict_cmd[i]:
+            f.write(j)
+
 #     for lin in cmd_sql:
 #         for i in range(2, len(lin)):
 #             if i == len(lin)-1:
