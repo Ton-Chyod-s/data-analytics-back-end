@@ -1,5 +1,6 @@
 
 dre.xlsx
+*.xls
 src/ArquivosDRE/__pycache__/planForgeRefactore_copy.cpython-312.pyc
 src/ArquivoResCliente/__pycache__/limpando_planilha_refactore.cpython-312.pyc
 src/ArquivoResCliente/Resultado Clientes.xlsx
