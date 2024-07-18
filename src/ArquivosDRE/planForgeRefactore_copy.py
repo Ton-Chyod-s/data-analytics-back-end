@@ -6,9 +6,9 @@ import locale
 import pandas as pd
 from time import sleep
 from datetime import datetime
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 data_atual = datetime.now()
 anoAtual = data_atual.year  
