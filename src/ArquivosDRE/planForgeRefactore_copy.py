@@ -220,6 +220,8 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
                         # Remover valores duplicados e valores 'NaN' da série e transformar em uma lista
                         meses = segunda_linha_meses.drop_duplicates().dropna().tolist()
 
+                    meses.sort(key=lambda x: datetime.strptime(x, '%b'))
+                    
                     # Filtrar colunas que contêm a substring 'Saldo', 'Débitos', 'Créditos', 'Metas/Orçam.' e '%Mt/Or'
                     colunas_a_remover = df.columns[df.columns.str.contains('Saldo|Débitos|Créditos|Metas/Orcam.|%Mt/Or')]
                     df = df.drop(columns=colunas_a_remover)
@@ -719,7 +721,7 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
 if __name__ == '__main__':
     ondeSalvarForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
     #caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
-    caminhoForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\test\Planilhas resultados - Power Bi'
+    caminhoForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\test\Planilhas resultados - Power Bi'
     
     tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 2)
     print(tempoExecucao)
