@@ -6,9 +6,9 @@ import locale
 import pandas as pd
 from time import sleep
 from datetime import datetime
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 data_atual = datetime.now()
 anoAtual = data_atual.year  
@@ -719,9 +719,8 @@ def forgePlan(caminho, ondeSalvar, ano_analisado, semestre_analisado):
         return f'Erro: {e}'
 
 if __name__ == '__main__':
-    ondeSalvarForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\\'
-    caminhoForge = r'\\192.168.1.2\dados\SUPERMERCADO CONTABIL\Planilhas resultados - Power Bi'
-    #caminhoForge = r'C:\Users\User\Documents\GitHub\data-analytics-back-end\src\ArquivosDRE\test\Planilhas resultados - Power Bi'
+    ondeSalvarForge = os.getenv('ONDE_SALVAR_DRE')
+    caminhoForge = os.getenv('CAMINHO_SERVIDOR_DRE')
     
     tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 2)
     print(tempoExecucao)
