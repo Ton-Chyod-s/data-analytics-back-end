@@ -42,3 +42,4 @@ src/ArquivoResCliente/Analise venda.pbix
 src/CmdSQL/ComandosLog.txt
 ComandosLog.txt
 src/ArquivoResCliente/~$Resultado Clientes.xlsx
+test/__init__.py
