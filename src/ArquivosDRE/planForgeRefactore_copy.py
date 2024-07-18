@@ -6,9 +6,9 @@ import locale
 import pandas as pd
 from time import sleep
 from datetime import datetime
-import dotenv 
+from dotenv import load_dotenv
 
-dotenv.load_dotenv(dotenv.find_dotenv())
+load_dotenv()
 
 data_atual = datetime.now()
 anoAtual = data_atual.year  
@@ -720,5 +720,5 @@ if __name__ == '__main__':
     ondeSalvarForge = os.getenv(r'ONDE_SALVAR_DRE') 
     caminhoForge = os.getenv(r'CAMINHO_SERVIDOR_DRE')
     
-    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 1)
+    tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 2)
     print(tempoExecucao)
