@@ -2,7 +2,9 @@ import pandas as pd
 import time
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Border, Side, Color
-from tqdm import tqdm
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def limp_plan(caminhoPasta,ondeSalvar):
     try:
