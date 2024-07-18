@@ -725,4 +725,3 @@ if __name__ == '__main__':
     
     tempoExecucao = forgePlan(caminhoForge, ondeSalvarForge, 2024, 2)
     print(tempoExecucao)
-
